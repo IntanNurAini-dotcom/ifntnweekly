@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data mahasiswa</title>
+    <title>Tambah Data Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Tambah Data Mahasiswa</h2>
-    <form action="proses_input.php" method="post">
-        <table>
-            <tr>
-                <td><label for="nama">Nama:</label></td>
-                <td>:</td>
-                <td><input type="text" id="nama" name="nama" required></td>
-            </tr>
-            <tr>
-                <td><label for="nama">NIM:</label></td>
-                <td>:</td>
-                <td><input type="text" id="nim" name="nim" required></td>
-            </tr>
-            <tr>
-                <td><label for="foto">Foto:</label></td>
-                <td>:</td>
-                <td><input type="file" id="foto" name="foto" accept="image/*"></td>
-            </tr>
-            <tr>
-                <td><label for="uts">UTS:</label></td>
-                <td>:</td>
-                <td><input type="number" id="uts" name="uts" min="0" max="100" required></td>
-            </tr>
-            <tr>
-                <td><label for="uas">UAS:</label></td>
-                <td>:</td>
-                <td><input type="number" id="uas" name="uas" min="0" max="100" required></td>
-            </tr>
-            <tr>
-                <td><label for="tugas">TUGAS:</label></td>
-                <td>:</td>
-                <td><input type="number" id="tugas" name="tugas" min="0" max="100" required></td>
-            </tr>
-        </table>
-        <button type="submit" name="submit" id="submit">Tambah Data</button>
-    
+
+<h1>WEB INFORMATIKA</h1>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+    <a href="datamahasiswa.html">Data Mahasiswa</a>
+</div>
+
+<h2 style="text-align:center;">Tambah Data Mahasiswa</h2>
+
+<!-- FORM CARD -->
+<div class="card form-card">
+
+    <form action="proses_input.php" method="post" enctype="multipart/form-data">
+
+        <label>Nama</label>
+        <input type="text" name="nama" required>
+
+        <label>NIM</label>
+        <input type="text" name="nim" required>
+
+        <label>Foto</label>
+        <input type="file" name="foto" accept="image/*">
+
+        <label>UTS</label>
+        <input type="number" name="uts" min="0" max="100" required>
+
+        <label>UAS</label>
+        <input type="number" name="uas" min="0" max="100" required>
+
+        <label>TUGAS</label>
+        <input type="number" name="tugas" min="0" max="100" required>
+
+        <button type="submit">Tambah Data</button>
+
     </form>
+
+</div>
+
 </body>
 </html>
