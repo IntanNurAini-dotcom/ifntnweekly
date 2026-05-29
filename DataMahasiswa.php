@@ -27,29 +27,39 @@
 </a>
 
 <!-- TABLE DATA -->
-<table>
+<table border="1" cellpadding="10">
     <tr>
         <th>No</th>
         <th>Nama</th>
         <th>NIM</th>
         <th>Jurusan</th>
         <th>Email</th>
-        <th><No. HP</th>
+        <th>No. HP</th>
         <th>Foto</th>
         <th>Aksi</th>
     </tr>
 
-   
-
     <tr>
         <td align="center">1</td>
         <td>Intan Nur Aini</td>
-        <td align="center">13182420014</td>
+        <td align="center">113182420014</td>
         <td align="center">Informatika</td>
-        <td><img src="c:\Users\LENOVO\Pictures\Saved Pictures\nyanyi.jpg"></td>
         <td align="center">aintannur905@gmail.com</td>
         <td align="center">0895110099666</td>
-        <td><a href="editdata.php"><button>Edit</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
+
+        <td align="center">
+            <img src="img/nyanyi.jpg" width="100">
+        </td>
+
+        <td align="center">
+            <a href="editdata.php">
+                <button>Edit</button>
+            </a>
+
+            <a href="deletedata.php">
+                <button>DELETE</button>
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -57,40 +67,58 @@
         <td>Pipimbull</td>
         <td align="center">101062006012</td>
         <td align="center">Informatika</td>
-        <td align="center"><img src="c:\Users\LENOVO\Pictures\Saved Pictures\intan.jpg.jpeg"></td>
         <td align="center">mbul@gmail.com</td>
         <td align="center">0895110099111</td>
-        <td><a href="editdata.php"><button>Edit</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
+
+        <td align="center">
+            <img src="img/intan.jpg.jpeg" width="100">
+        </td>
+
+        <td align="center">
+            <a href="editdata.php">
+                <button>Edit</button>
+            </a>
+
+            <a href="deletedata.php">
+                <button>DELETE</button>
+            </a>
+        </td>
+    </tr>
+
 </table>
 
 <hr>
 
 <h3>Latihan</h3>
 
-<table class="latihan">
+<table class="latihan" border="1" cellpadding="10">
+
     <tr>
         <td>1,1</td>
         <td>1,2</td>
         <td>1,3</td>
         <td>1,4</td>
     </tr>
+
     <tr>
         <td>2,1</td>
         <td colspan="2">?</td>
         <td>2,4</td>
     </tr>
+
     <tr>
         <td>3,1</td>
-        <td>3,4</td>
+        <td colspan="3">3,4</td>
     </tr>
+
     <tr>
         <td>4,1</td>
         <td>4,2</td>
         <td>4,3</td>
         <td>4,4</td>
     </tr>
+
 </table>
 
 </body>
 </html>
-
