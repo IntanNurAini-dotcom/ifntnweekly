@@ -13,10 +13,10 @@
 <h1>WEB INFORMATIKA</h1>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profil</a>
-    <a href="contact.html">Contact</a>
-    <a href="datamahasiswa.html">Data Mahasiswa</a>
+    <a href="index.php">Home</a>
+    <a href="profile.php">Profil</a>
+    <a href="contact.php">Contact</a>
+    <a href="datamahasiswa.php">Data Mahasiswa</a>
 </div>
 
 <div class="card">

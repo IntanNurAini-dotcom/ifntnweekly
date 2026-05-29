@@ -12,10 +12,10 @@
 <h1>WEB INFORMATIKA</h1>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profile</a>
-    <a href="contact.html">Contact</a>
-    <a href="datamahasiswa.html">Data Mahasiswa</a>
+    <a href="index.php">Home</a>
+    <a href="profile.php">Profile</a>
+    <a href="contact.php">Contact</a>
+    <a href="datamahasiswa.php">Data Mahasiswa</a>
 </div>
 
 <h2 style="text-align:center;">Contact Me</h2>

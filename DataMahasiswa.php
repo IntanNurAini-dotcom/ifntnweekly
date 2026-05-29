@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Portofolio Intan Nur Aini</h1>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.php">Home</a>
+    <a href="profile.php">Profile</a>
+    <a href="contact.php">Kontak</a>
+    <a href="datamahasiswa.php">Data Mahasiswa</a>
+</div>
+
+<h2>Data Mahasiswa</h2>
+
+<a href="inputdata.php">
+    <button>+ Tambah Data Mahasiswa</button>
+</a>
+
+<!-- TABLE DATA -->
+<table>
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Jurusan</th>
+        <th>Email</th>
+        <th><No. HP</th>
+        <th>Foto</th>
+        <th>Aksi</th>
+    </tr>
+
+   
+
+    <tr>
+        <td align="center">1</td>
+        <td>Intan Nur Aini</td>
+        <td align="center">13182420014</td>
+        <td align="center">Informatika</td>
+        <td><img src="c:\Users\LENOVO\Pictures\Saved Pictures\nyanyi.jpg"></td>
+        <td align="center">aintannur905@gmail.com</td>
+        <td align="center">0895110099666</td>
+        <td><a href="editdata.php"><button>Edit</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
+    </tr>
+
+    <tr>
+        <td align="center">2</td>
+        <td>Pipimbull</td>
+        <td align="center">101062006012</td>
+        <td align="center">Informatika</td>
+        <td align="center"><img src="c:\Users\LENOVO\Pictures\Saved Pictures\intan.jpg.jpeg"></td>
+        <td align="center">mbul@gmail.com</td>
+        <td align="center">0895110099111</td>
+        <td><a href="editdata.php"><button>Edit</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
+</table>
+
+<hr>
+
+<h3>Latihan</h3>
+
+<table class="latihan">
+    <tr>
+        <td>1,1</td>
+        <td>1,2</td>
+        <td>1,3</td>
+        <td>1,4</td>
+    </tr>
+    <tr>
+        <td>2,1</td>
+        <td colspan="2">?</td>
+        <td>2,4</td>
+    </tr>
+    <tr>
+        <td>3,1</td>
+        <td>3,4</td>
+    </tr>
+    <tr>
+        <td>4,1</td>
+        <td>4,2</td>
+        <td>4,3</td>
+        <td>4,4</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
