@@ -1,3 +1,43 @@
+<?php
+
+echo"halo cantik<br>";
+
+$nama = "aini";
+echo "pipinya embull si $nama<br>";
+
+$connection = mysqli_connect("localhost", "root", "", "ntnweekly");
+
+// if($koneksi)
+//{
+// echo 'Koneksi berhasil!";
+//}
+   
+
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connection, $query);
+var_dump($result);
+
+/// ambil data (fetch) mahasiswa dari  lemari result
+///mysqli_fetch_row()
+
+// while ($mhs = mysqli_fetch_assoc($result)) 
+//     {
+//         var_dump($mhs);
+//     }
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,16 +79,20 @@
         <th>Aksi</th>
     </tr>
 
+<?php
+while($mhs = mysqli_fetch_assoc($result))
+{
+ ?>
     <tr>
         <td align="center">1</td>
-        <td>Intan Nur Aini</td>
-        <td align="center">113182420014</td>
-        <td align="center">Informatika</td>
-        <td align="center">aintannur905@gmail.com</td>
-        <td align="center">0895110099666</td>
+        <td><?php echo $mhs["nama"]?></td>
+        <td align="center"><?php echo $mhs ["nim"] ?></td>
+        <td align="center"><?php echo $mhs ["jurusan"] ?></td>
+        <td align="center"><?php echo $mhs ["email"] ?></td>
+        <td align="center"><?php echo $mhs ["no_hp"] ?></td>
 
         <td align="center">
-            <img src="img/nyanyi.jpg" width="100">
+            <img src="assets/images/ppp.png"><?php echo $mhs ["foto"] ?>
         </td>
 
         <td align="center">
@@ -61,6 +105,10 @@
             </a>
         </td>
     </tr>
+    <?php
+    }
+    ?>
+    
 
     <tr>
         <td align="center">2</td>
@@ -71,7 +119,7 @@
         <td align="center">0895110099111</td>
 
         <td align="center">
-            <img src="img/intan.jpg.jpeg" width="100">
+            <img src="assets/images/intun.jpeg">
         </td>
 
         <td align="center">
