@@ -1,30 +1,9 @@
 <?php
 
-echo"halo cantik<br>";
+require 'fungsi.php';
 
-$nama = "aini";
-echo "pipinya embull si $nama<br>";
-
-$connection = mysqli_connect("localhost", "root", "", "ntnweekly");
-
-// if($koneksi)
-//{
-// echo 'Koneksi berhasil!";
-//}
-   
-
-$query = "SELECT * FROM mahasiswa";
-$result = mysqli_query($connection, $query);
-var_dump($result);
-
-/// ambil data (fetch) mahasiswa dari  lemari result
-///mysqli_fetch_row()
-
-// while ($mhs = mysqli_fetch_assoc($result)) 
-//     {
-//         var_dump($mhs);
-//     }
-
+$mahasiswa = "SELECT * FROM mahasiswa";
+$mahasiswa = tampildata($mahasiswa);///wadah dengan data mahasiswa yang sudah diambil dari data base 
 
 
 ?>
@@ -80,7 +59,8 @@ var_dump($result);
     </tr>
 
 <?php
-while($mhs = mysqli_fetch_assoc($result))
+$i = 1;
+foreach ($mahasiswa as $mhs)
 {
  ?>
     <tr>
