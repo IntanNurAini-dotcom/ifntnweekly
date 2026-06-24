@@ -72,16 +72,16 @@ foreach ($mahasiswa as $mhs)
         <td align="center"><?php echo $mhs ["no_hp"] ?></td>
 
         <td align="center">
-            <img src="assets/images/ppp.png"><?php echo $mhs ["foto"] ?>
+            <img src="assets/images/<?php echo $mhs ["foto"] ?>" width="30px">
         </td>
 
         <td align="center">
-            <a href="editdata.php">
+            <a href="editdata.php?id=<?php echo $mhs["id"]; ?>">
                 <button>Edit</button>
             </a>
 
-            <a href="deletedata.php">
-                <button>DELETE</button>
+            <a href="deletedata.php?id=<?php echo $mhs["id"]; ?>" onclick="return confirm('Yakin?')"><button>DELETE</button></a></td>
+        
             </a>
         </td>
     </tr>
@@ -99,7 +99,7 @@ foreach ($mahasiswa as $mhs)
         <td align="center">0895110099111</td>
 
         <td align="center">
-            <img src="assets/images/intun.jpeg">
+            <img src="assets/images/intun.jpeg" width="30px">
         </td>
 
         <td align="center">
@@ -112,6 +112,7 @@ foreach ($mahasiswa as $mhs)
             </a>
         </td>
     </tr>
+    
 
 </table>
 

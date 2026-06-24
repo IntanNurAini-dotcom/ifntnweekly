@@ -3,19 +3,10 @@ require 'fungsi.php';
 
 if (isset($_POST["kirim"])) {
 
-    $nama = $_POST["nama"];
-    $nim = $_POST["nim"];
-    $prodi = $_POST["jurusan"];
-    $email = $_POST["email"];
-    $nohp = $_POST["nohp"];
-    $foto = $_POST["foto"];
 
-    $query = "INSERT INTO mahasiswa (nama, nim, jurusan, email, no_hp, foto)
-              VALUES ('$nama', '$nim', '$prodi', '$email', '$nohp', '$foto')";
+    
 
-    mysqli_query($conn, $query);
-
-    if (mysqli_affected_rows($conn) > 0) {
+    if (inputdata($_POST, $_FILES["foto"]) > 0) {
         echo "<script>
                 alert('Data Berhasil Ditambahkan!');
                 window.location.href='DataMahasiswa.php';
@@ -40,7 +31,7 @@ if (isset($_POST["kirim"])) {
 </head>
 <body>
     <h2>Tambah Data Mahasiswa</h2>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <td><label for="nama">Nama:</label></td>
@@ -70,7 +61,7 @@ if (isset($_POST["kirim"])) {
             <tr>
                 <td><label for="foto">Foto</label></td>
                 <td>:</td>
-                <td><input type="text" name="foto" id="foto"/></td>
+                <td><input type="file" name="foto" id="foto"/></td>
             </tr>
         </table>
         <button type="submit" name="kirim" >Tambah Data</button>
