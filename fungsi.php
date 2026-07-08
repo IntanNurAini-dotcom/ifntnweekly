@@ -77,3 +77,40 @@ function editdata($data, $id)
 
     return mysqli_affected_rows($conn);
 }
+
+
+function register($data)
+{ 
+    $username = stripslashes($data["username"]);
+    $password1 = mysqli_real_escape_string($GLOBALS['conn'], $data['password1']);
+    $password2 = mysqli_real_escape_string($GLOBALS['conn'], $data['password2']);
+}
+
+if ($password1 != $password2) {
+        echo "<script>
+                alert('Konfirmasi Password Tidak Sesuai!');
+              </script>";
+        return false;
+    }
+
+    $queryrow = mysqli_query($GLOBALS['conn'], "SELECT username FROM user WHERE username = '$username'");
+    $result = mysqli_fetch_assoc($queryrow);
+
+    if(mysqli_num_rows($queryrow) > 0) {
+        echo "<script>
+                alert('Username Sudah Terdaftar!');
+              </script>";
+        return false;
+    }
+
+$password = password_hash($password1, PASSWORD_DEFAULT);
+
+$query = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+
+
+    mysqli_query($GLOBALS['conn'], $query);
+
+    return mysqli_affected_rows($GLOBALS['conn']);
+
+
+

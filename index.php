@@ -17,6 +17,7 @@
     <a href="profile.php">Profil</a>
     <a href="contact.php">Contact</a>
     <a href="datamahasiswa.php">Data Mahasiswa</a>
+    <td><a href="login.php">Login</a></td>
 </div>
 
 <div class="card">
