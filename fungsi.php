@@ -112,5 +112,34 @@ $query = "INSERT INTO user (username, password) VALUES ('$username', '$password'
 
     return mysqli_affected_rows($GLOBALS['conn']);
 
+function login($data)
+{
+    global $conn;
 
+    $username = mysqli_real_escape_string($conn, $data["username"]);
+    $password = $data["password"];
 
+    // Ambil data berdasarkan username
+    $query = "SELECT * FROM user WHERE username = '$username'";
+    $result = mysqli_query($conn, $query);
+
+    // Cek apakah username ada
+    if (mysqli_num_rows($result) == 1) {
+
+        $row = mysqli_fetch_assoc($result);
+
+        // Cek password
+        if (password_verify($password, $row["password"])) {
+
+            // Simpan session
+            $_SESSION["login"] = true;
+            $_SESSION["id"] = $row["id"];
+            $_SESSION["username"] = $row["username"];
+
+            return true;
+        }
+    }
+
+    return false;
+
+}

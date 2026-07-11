@@ -1,3 +1,18 @@
+<?php
+session_start();
+require 'fungsi.php';
+
+if(isset($_POST["login"]))
+{
+    if(login($_POST)){
+        header("Location: index.php");
+        exit;
+    } else {
+        $error = true;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
